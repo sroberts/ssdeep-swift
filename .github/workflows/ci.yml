@@ -1,0 +1,148 @@
+name: CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+
+jobs:
+  test-macos:
+    name: Test on macOS
+    runs-on: macos-latest
+    strategy:
+      matrix:
+        swift-version: ['5.9', '5.10']
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Swift
+        uses: swift-actions/setup-swift@v2
+        with:
+          swift-version: ${{ matrix.swift-version }}
+
+      - name: Build
+        run: swift build -v
+
+      - name: Run Tests
+        run: swift test -v
+
+  test-linux:
+    name: Test on Linux
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        swift-version: ['5.9', '5.10']
+    container:
+      image: swift:${{ matrix.swift-version }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build
+        run: swift build -v
+
+      - name: Run Tests
+        run: swift test -v
+
+  test-ios:
+    name: Test on iOS Simulator
+    runs-on: macos-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Swift
+        uses: swift-actions/setup-swift@v2
+        with:
+          swift-version: '5.10'
+
+      - name: Build for iOS
+        run: |
+          xcodebuild build \
+            -scheme SSDeep \
+            -destination 'platform=iOS Simulator,name=iPhone 15,OS=latest' \
+            -derivedDataPath .build/ios
+
+      - name: Test on iOS
+        run: |
+          xcodebuild test \
+            -scheme SSDeep \
+            -destination 'platform=iOS Simulator,name=iPhone 15,OS=latest' \
+            -derivedDataPath .build/ios
+
+  test-tvos:
+    name: Test on tvOS Simulator
+    runs-on: macos-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Swift
+        uses: swift-actions/setup-swift@v2
+        with:
+          swift-version: '5.10'
+
+      - name: Build for tvOS
+        run: |
+          xcodebuild build \
+            -scheme SSDeep \
+            -destination 'platform=tvOS Simulator,name=Apple TV,OS=latest' \
+            -derivedDataPath .build/tvos
+
+      - name: Test on tvOS
+        run: |
+          xcodebuild test \
+            -scheme SSDeep \
+            -destination 'platform=tvOS Simulator,name=Apple TV,OS=latest' \
+            -derivedDataPath .build/tvos
+
+  test-watchos:
+    name: Build for watchOS
+    runs-on: macos-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Swift
+        uses: swift-actions/setup-swift@v2
+        with:
+          swift-version: '5.10'
+
+      - name: Build for watchOS
+        run: |
+          xcodebuild build \
+            -scheme SSDeep \
+            -destination 'platform=watchOS Simulator,name=Apple Watch Series 9 (45mm),OS=latest' \
+            -derivedDataPath .build/watchos
+
+  code-coverage:
+    name: Code Coverage
+    runs-on: macos-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Swift
+        uses: swift-actions/setup-swift@v2
+        with:
+          swift-version: '5.10'
+
+      - name: Run Tests with Coverage
+        run: swift test --enable-code-coverage
+
+      - name: Generate Coverage Report
+        run: |
+          xcrun llvm-cov export \
+            .build/debug/SSDeepPackageTests.xctest/Contents/MacOS/SSDeepPackageTests \
+            -instr-profile .build/debug/codecov/default.profdata \
+            -format lcov \
+            -ignore-filename-regex '.build|Tests' \
+            > coverage.lcov
+
+      - name: Upload Coverage to Codecov
+        uses: codecov/codecov-action@v4
+        with:
+          files: coverage.lcov
+          fail_ci_if_error: false
