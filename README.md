@@ -1,6 +1,6 @@
 # SSDeep
 
-[![CI](https://github.com/YOUR_USERNAME/ssdeep-swift/actions/workflows/ci.yml/badge.svg)](https://github.com/YOUR_USERNAME/ssdeep-swift/actions/workflows/ci.yml)
+[![CI](https://github.com/sroberts/ssdeep-swift/actions/workflows/ci.yml/badge.svg)](https://github.com/YOUR_USERNAME/ssdeep-swift/actions/workflows/ci.yml)
 [![Swift 5.9+](https://img.shields.io/badge/Swift-5.9+-orange.svg)](https://swift.org)
 [![Platforms](https://img.shields.io/badge/Platforms-macOS%20|%20iOS%20|%20tvOS%20|%20watchOS%20|%20visionOS%20|%20Linux-blue.svg)](https://swift.org)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
