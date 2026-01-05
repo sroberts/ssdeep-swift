@@ -1,3 +1,0 @@
-module SSDeep {
-    header "/home/runner/work/ssdeep-swift/ssdeep-swift/.build/x86_64-unknown-linux-gnu/debug/SSDeep.build/include/SSDeep-Swift.h"
-}
