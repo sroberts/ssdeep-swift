@@ -62,14 +62,14 @@ jobs:
         run: |
           xcodebuild build \
             -scheme SSDeep \
-            -destination 'platform=iOS Simulator,name=iPhone 15,OS=latest' \
+            -destination 'platform=iOS Simulator,name=iPhone SE (3rd generation),OS=latest' \
             -derivedDataPath .build/ios
 
       - name: Test on iOS
         run: |
           xcodebuild test \
             -scheme SSDeep \
-            -destination 'platform=iOS Simulator,name=iPhone 15,OS=latest' \
+            -destination 'platform=iOS Simulator,name=iPhone SE (3rd generation),OS=latest' \
             -derivedDataPath .build/ios
 
   test-tvos:
@@ -88,14 +88,14 @@ jobs:
         run: |
           xcodebuild build \
             -scheme SSDeep \
-            -destination 'platform=tvOS Simulator,name=Apple TV,OS=latest' \
+            -destination 'platform=tvOS Simulator,name=Apple TV 4K (3rd generation),OS=latest' \
             -derivedDataPath .build/tvos
 
       - name: Test on tvOS
         run: |
           xcodebuild test \
             -scheme SSDeep \
-            -destination 'platform=tvOS Simulator,name=Apple TV,OS=latest' \
+            -destination 'platform=tvOS Simulator,name=Apple TV 4K (3rd generation),OS=latest' \
             -derivedDataPath .build/tvos
 
   test-watchos:
@@ -114,7 +114,7 @@ jobs:
         run: |
           xcodebuild build \
             -scheme SSDeep \
-            -destination 'platform=watchOS Simulator,name=Apple Watch Series 9 (45mm),OS=latest' \
+            -destination 'platform=watchOS Simulator,name=Apple Watch Series 9 (41mm),OS=latest' \
             -derivedDataPath .build/watchos
 
   code-coverage:
