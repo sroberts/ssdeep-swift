@@ -1,0 +1,68 @@
+{
+  "": {
+    "swift-dependencies": "/home/runner/work/ssdeep-swift/ssdeep-swift/.build/x86_64-unknown-linux-gnu/debug/SSDeep.build/master.swiftdeps"
+  },
+  "/home/runner/work/ssdeep-swift/ssdeep-swift/Sources/SSDeep/Internal/Base64.swift": {
+    "dependencies": "/home/runner/work/ssdeep-swift/ssdeep-swift/.build/x86_64-unknown-linux-gnu/debug/SSDeep.build/Base64.d",
+    "object": "/home/runner/work/ssdeep-swift/ssdeep-swift/.build/x86_64-unknown-linux-gnu/debug/SSDeep.build/Base64.swift.o",
+    "swiftmodule": "/home/runner/work/ssdeep-swift/ssdeep-swift/.build/x86_64-unknown-linux-gnu/debug/SSDeep.build/Base64~partial.swiftmodule",
+    "swift-dependencies": "/home/runner/work/ssdeep-swift/ssdeep-swift/.build/x86_64-unknown-linux-gnu/debug/SSDeep.build/Base64.swiftdeps",
+    "diagnostics": "/home/runner/work/ssdeep-swift/ssdeep-swift/.build/x86_64-unknown-linux-gnu/debug/SSDeep.build/Base64.dia"
+  },
+  "/home/runner/work/ssdeep-swift/ssdeep-swift/Sources/SSDeep/Internal/Constants.swift": {
+    "dependencies": "/home/runner/work/ssdeep-swift/ssdeep-swift/.build/x86_64-unknown-linux-gnu/debug/SSDeep.build/Constants.d",
+    "object": "/home/runner/work/ssdeep-swift/ssdeep-swift/.build/x86_64-unknown-linux-gnu/debug/SSDeep.build/Constants.swift.o",
+    "swiftmodule": "/home/runner/work/ssdeep-swift/ssdeep-swift/.build/x86_64-unknown-linux-gnu/debug/SSDeep.build/Constants~partial.swiftmodule",
+    "swift-dependencies": "/home/runner/work/ssdeep-swift/ssdeep-swift/.build/x86_64-unknown-linux-gnu/debug/SSDeep.build/Constants.swiftdeps",
+    "diagnostics": "/home/runner/work/ssdeep-swift/ssdeep-swift/.build/x86_64-unknown-linux-gnu/debug/SSDeep.build/Constants.dia"
+  },
+  "/home/runner/work/ssdeep-swift/ssdeep-swift/Sources/SSDeep/Internal/EditDistance.swift": {
+    "dependencies": "/home/runner/work/ssdeep-swift/ssdeep-swift/.build/x86_64-unknown-linux-gnu/debug/SSDeep.build/EditDistance.d",
+    "object": "/home/runner/work/ssdeep-swift/ssdeep-swift/.build/x86_64-unknown-linux-gnu/debug/SSDeep.build/EditDistance.swift.o",
+    "swiftmodule": "/home/runner/work/ssdeep-swift/ssdeep-swift/.build/x86_64-unknown-linux-gnu/debug/SSDeep.build/EditDistance~partial.swiftmodule",
+    "swift-dependencies": "/home/runner/work/ssdeep-swift/ssdeep-swift/.build/x86_64-unknown-linux-gnu/debug/SSDeep.build/EditDistance.swiftdeps",
+    "diagnostics": "/home/runner/work/ssdeep-swift/ssdeep-swift/.build/x86_64-unknown-linux-gnu/debug/SSDeep.build/EditDistance.dia"
+  },
+  "/home/runner/work/ssdeep-swift/ssdeep-swift/Sources/SSDeep/Internal/FNVHash.swift": {
+    "dependencies": "/home/runner/work/ssdeep-swift/ssdeep-swift/.build/x86_64-unknown-linux-gnu/debug/SSDeep.build/FNVHash.d",
+    "object": "/home/runner/work/ssdeep-swift/ssdeep-swift/.build/x86_64-unknown-linux-gnu/debug/SSDeep.build/FNVHash.swift.o",
+    "swiftmodule": "/home/runner/work/ssdeep-swift/ssdeep-swift/.build/x86_64-unknown-linux-gnu/debug/SSDeep.build/FNVHash~partial.swiftmodule",
+    "swift-dependencies": "/home/runner/work/ssdeep-swift/ssdeep-swift/.build/x86_64-unknown-linux-gnu/debug/SSDeep.build/FNVHash.swiftdeps",
+    "diagnostics": "/home/runner/work/ssdeep-swift/ssdeep-swift/.build/x86_64-unknown-linux-gnu/debug/SSDeep.build/FNVHash.dia"
+  },
+  "/home/runner/work/ssdeep-swift/ssdeep-swift/Sources/SSDeep/Internal/RollingHash.swift": {
+    "dependencies": "/home/runner/work/ssdeep-swift/ssdeep-swift/.build/x86_64-unknown-linux-gnu/debug/SSDeep.build/RollingHash.d",
+    "object": "/home/runner/work/ssdeep-swift/ssdeep-swift/.build/x86_64-unknown-linux-gnu/debug/SSDeep.build/RollingHash.swift.o",
+    "swiftmodule": "/home/runner/work/ssdeep-swift/ssdeep-swift/.build/x86_64-unknown-linux-gnu/debug/SSDeep.build/RollingHash~partial.swiftmodule",
+    "swift-dependencies": "/home/runner/work/ssdeep-swift/ssdeep-swift/.build/x86_64-unknown-linux-gnu/debug/SSDeep.build/RollingHash.swiftdeps",
+    "diagnostics": "/home/runner/work/ssdeep-swift/ssdeep-swift/.build/x86_64-unknown-linux-gnu/debug/SSDeep.build/RollingHash.dia"
+  },
+  "/home/runner/work/ssdeep-swift/ssdeep-swift/Sources/SSDeep/SSDeep.swift": {
+    "dependencies": "/home/runner/work/ssdeep-swift/ssdeep-swift/.build/x86_64-unknown-linux-gnu/debug/SSDeep.build/SSDeep.d",
+    "object": "/home/runner/work/ssdeep-swift/ssdeep-swift/.build/x86_64-unknown-linux-gnu/debug/SSDeep.build/SSDeep.swift.o",
+    "swiftmodule": "/home/runner/work/ssdeep-swift/ssdeep-swift/.build/x86_64-unknown-linux-gnu/debug/SSDeep.build/SSDeep~partial.swiftmodule",
+    "swift-dependencies": "/home/runner/work/ssdeep-swift/ssdeep-swift/.build/x86_64-unknown-linux-gnu/debug/SSDeep.build/SSDeep.swiftdeps",
+    "diagnostics": "/home/runner/work/ssdeep-swift/ssdeep-swift/.build/x86_64-unknown-linux-gnu/debug/SSDeep.build/SSDeep.dia"
+  },
+  "/home/runner/work/ssdeep-swift/ssdeep-swift/Sources/SSDeep/SSDeepError.swift": {
+    "dependencies": "/home/runner/work/ssdeep-swift/ssdeep-swift/.build/x86_64-unknown-linux-gnu/debug/SSDeep.build/SSDeepError.d",
+    "object": "/home/runner/work/ssdeep-swift/ssdeep-swift/.build/x86_64-unknown-linux-gnu/debug/SSDeep.build/SSDeepError.swift.o",
+    "swiftmodule": "/home/runner/work/ssdeep-swift/ssdeep-swift/.build/x86_64-unknown-linux-gnu/debug/SSDeep.build/SSDeepError~partial.swiftmodule",
+    "swift-dependencies": "/home/runner/work/ssdeep-swift/ssdeep-swift/.build/x86_64-unknown-linux-gnu/debug/SSDeep.build/SSDeepError.swiftdeps",
+    "diagnostics": "/home/runner/work/ssdeep-swift/ssdeep-swift/.build/x86_64-unknown-linux-gnu/debug/SSDeep.build/SSDeepError.dia"
+  },
+  "/home/runner/work/ssdeep-swift/ssdeep-swift/Sources/SSDeep/SSDeepGenerator.swift": {
+    "dependencies": "/home/runner/work/ssdeep-swift/ssdeep-swift/.build/x86_64-unknown-linux-gnu/debug/SSDeep.build/SSDeepGenerator.d",
+    "object": "/home/runner/work/ssdeep-swift/ssdeep-swift/.build/x86_64-unknown-linux-gnu/debug/SSDeep.build/SSDeepGenerator.swift.o",
+    "swiftmodule": "/home/runner/work/ssdeep-swift/ssdeep-swift/.build/x86_64-unknown-linux-gnu/debug/SSDeep.build/SSDeepGenerator~partial.swiftmodule",
+    "swift-dependencies": "/home/runner/work/ssdeep-swift/ssdeep-swift/.build/x86_64-unknown-linux-gnu/debug/SSDeep.build/SSDeepGenerator.swiftdeps",
+    "diagnostics": "/home/runner/work/ssdeep-swift/ssdeep-swift/.build/x86_64-unknown-linux-gnu/debug/SSDeep.build/SSDeepGenerator.dia"
+  },
+  "/home/runner/work/ssdeep-swift/ssdeep-swift/Sources/SSDeep/SSDeepHash.swift": {
+    "dependencies": "/home/runner/work/ssdeep-swift/ssdeep-swift/.build/x86_64-unknown-linux-gnu/debug/SSDeep.build/SSDeepHash.d",
+    "object": "/home/runner/work/ssdeep-swift/ssdeep-swift/.build/x86_64-unknown-linux-gnu/debug/SSDeep.build/SSDeepHash.swift.o",
+    "swiftmodule": "/home/runner/work/ssdeep-swift/ssdeep-swift/.build/x86_64-unknown-linux-gnu/debug/SSDeep.build/SSDeepHash~partial.swiftmodule",
+    "swift-dependencies": "/home/runner/work/ssdeep-swift/ssdeep-swift/.build/x86_64-unknown-linux-gnu/debug/SSDeep.build/SSDeepHash.swiftdeps",
+    "diagnostics": "/home/runner/work/ssdeep-swift/ssdeep-swift/.build/x86_64-unknown-linux-gnu/debug/SSDeep.build/SSDeepHash.dia"
+  }
+}
