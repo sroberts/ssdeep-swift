@@ -62,14 +62,14 @@ jobs:
         run: |
           xcodebuild build \
             -scheme SSDeep \
-            -destination 'platform=iOS Simulator,name=iPhone SE (3rd generation),OS=latest' \
+            -destination 'platform=iOS Simulator,name=iPhone 16,OS=latest' \
             -derivedDataPath .build/ios
 
       - name: Test on iOS
         run: |
           xcodebuild test \
             -scheme SSDeep \
-            -destination 'platform=iOS Simulator,name=iPhone SE (3rd generation),OS=latest' \
+            -destination 'platform=iOS Simulator,name=iPhone 16,OS=latest' \
             -derivedDataPath .build/ios
 
   test-tvos:
@@ -114,7 +114,7 @@ jobs:
         run: |
           xcodebuild build \
             -scheme SSDeep \
-            -destination 'platform=watchOS Simulator,name=Apple Watch Series 9 (41mm),OS=latest' \
+            -destination 'platform=watchOS Simulator,name=Apple Watch Series 10 (42mm),OS=latest' \
             -derivedDataPath .build/watchos
 
   code-coverage:
