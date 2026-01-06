@@ -12,7 +12,7 @@ jobs:
     runs-on: macos-latest
     strategy:
       matrix:
-        swift-version: ['5.9', '5.10']
+        swift-version: ['5.10']
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -33,7 +33,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        swift-version: ['5.9', '5.10']
+        swift-version: ['5.10']
     container:
       image: swift:${{ matrix.swift-version }}
     steps:
