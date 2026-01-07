@@ -132,7 +132,7 @@ final class EditDistanceTests: XCTestCase {
 
     func testSingleSubstitution() {
         let distance = EditDistance.weightedEditDistance("hello", "hallo")
-        XCTAssertEqual(distance, 3)  // Substitution cost is 3
+        XCTAssertEqual(distance, 2)  // Optimal: delete 'e' (1) + insert 'a' (1) = 2, cheaper than substitution (3)
     }
 
     func testEmptyStrings() {
