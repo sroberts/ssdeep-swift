@@ -26,7 +26,10 @@ let package = Package(
         ),
         .testTarget(
             name: "SSDeepTests",
-            dependencies: ["SSDeep"]
+            dependencies: ["SSDeep"],
+            resources: [
+                .copy("TestData")
+            ]
         )
     ]
 )

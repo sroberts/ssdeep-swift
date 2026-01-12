@@ -1,0 +1,64 @@
+{
+  "version": "1.0.0",
+  "metadata": {
+    "created": "2025-01-12T12:00:00Z",
+    "author": "Test Suite",
+    "description": "Sample JSON data for SSDeep testing"
+  },
+  "users": [
+    {
+      "id": "user-001",
+      "username": "alice",
+      "email": "alice@example.com",
+      "roles": ["admin", "developer"],
+      "settings": {
+        "theme": "dark",
+        "notifications": true,
+        "language": "en"
+      }
+    },
+    {
+      "id": "user-002",
+      "username": "bob",
+      "email": "bob@example.com",
+      "roles": ["user"],
+      "settings": {
+        "theme": "light",
+        "notifications": false,
+        "language": "en"
+      }
+    }
+  ],
+  "data": {
+    "measurements": [
+      {"timestamp": 1641038400, "value": 23.5, "unit": "celsius"},
+      {"timestamp": 1641042000, "value": 24.1, "unit": "celsius"},
+      {"timestamp": 1641045600, "value": 23.8, "unit": "celsius"}
+    ],
+    "summary": {
+      "average": 23.8,
+      "min": 23.5,
+      "max": 24.1,
+      "count": 3
+    }
+  },
+  "config": {
+    "server": {
+      "host": "0.0.0.0",
+      "port": 8080,
+      "ssl": true,
+      "cert_path": "/etc/ssl/cert.pem"
+    },
+    "database": {
+      "type": "postgresql",
+      "host": "localhost",
+      "port": 5432,
+      "name": "testdb"
+    },
+    "logging": {
+      "level": "info",
+      "format": "json",
+      "outputs": ["stdout", "file"]
+    }
+  }
+}
