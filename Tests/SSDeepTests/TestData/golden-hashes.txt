@@ -1,0 +1,39 @@
+# SSDeep Golden Reference Hashes
+# Generated: 2026-01-12 17:34:02 UTC
+# SSDeep Version: 2.14.1
+# Format: filepath|hash
+
+Tests/SSDeepTests/TestData/essential/binary.bin|96:mOiuiVviPuRG+Hpz56N73hfCtYH10J8csaIdF5vAKz5p:ltuhqxKtYHPcsaGAi
+Tests/SSDeepTests/TestData/essential/empty.bin|3::
+Tests/SSDeepTests/TestData/essential/large.bin|24576:o8tUxy/Q9GjOffwfshDeGKkKCS8v7Upo4K3TYUAq:o8uxG7JEhqh6P7sjK3TYUAq
+Tests/SSDeepTests/TestData/essential/line-endings-crlf.txt|48:PccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccX:3
+Tests/SSDeepTests/TestData/essential/line-endings-lf.txt|48:DLCLCLCLCLCLCLCLCLCLCLCLCLCLCLCLCLCLCLCLCLCLCLCLCLCLCLCLCLCLCLCy:D222222222222222222222222222222z
+Tests/SSDeepTests/TestData/essential/medium.bin|192:VgSi9nEqzzoqLy/4fhRnUarFNUnhFVfN9aAztEcgAvWqUg/RmKnPZxyFHN:Fi6rqy/4b3FGFVna2jTnBxyFt
+Tests/SSDeepTests/TestData/essential/null-bytes.bin|3::
+Tests/SSDeepTests/TestData/essential/repeated.txt|12:n88888888888888888888888888888888888888888888888888888888888888j:n
+Tests/SSDeepTests/TestData/essential/small.txt|3:wz//NMUi1WVPicyqjjKicAmBZe89vz7l4Pe:wz//eTcoO5cAme89nue
+Tests/SSDeepTests/TestData/essential/tiny.txt|3:aE:aE
+Tests/SSDeepTests/TestData/essential/utf8.txt|3:uFCnFXA+zdXaaDFg9B9Ngiw9k8qn:uFoXVzdXaa+azk8q
+Tests/SSDeepTests/TestData/real-world/archive.zip|6144:PA6nq49pXBe1t6PMjtlVgSvfjzgMVURZwl7xSzBgWW:3nBReL6PeLzgMVUO7xEmWW
+Tests/SSDeepTests/TestData/real-world/document.pdf|12:IoTWRQb9WhWJyERe3j80jiXvyXumaz7nHgw+HsZYjqHeHeHeHeHeHeHeHeHeHeH8:rWQbWcfS80GXvKIbHKHl
+Tests/SSDeepTests/TestData/real-world/executable.elf|12288:BwleRQtYL/UMAgNzXCDwdZl2eHajkj5JZTABTcVB:qlaQtYlVXKwdZ7R7ZTABq
+Tests/SSDeepTests/TestData/real-world/executable.macho|12288:8fiyq26xHWdxH2hk4eAONX8q2ZkgOAvvl1YDsRkFj5dA:IrnWfoX12xOSCmk/dA
+Tests/SSDeepTests/TestData/real-world/image.jpg|768:bxq1Hld+/mWzDScl5NicODnfh4dOL260yT9Fj8NFiPbXMnrA6OQfugVkXMZR89UU:b8liBNidDnfhcOL26D58CyfuCZZ5E5H
+Tests/SSDeepTests/TestData/real-world/json-data.json|24:Y1kfVpoz633AYMlACBLSb4/PSXWUCImbtEzHHHMOuGSQPFkotptEqBy2Cp5:Ak9SGnAzLt/PSXb7mRqSaSoH26m5
+Tests/SSDeepTests/TestData/real-world/log-file.log|1536:XDxDxDxDxDxDxDxDxDxDxDxDxDxDxDxDxDxDxDxDxDxDxDxDxDxDxDxDxDxDJ:zhhhhhhhhhhhhhhhhhhhhhhhhhhhhhJ
+Tests/SSDeepTests/TestData/real-world/source.swift|48:w7uJP4vDiqHpoPy09nrg67itKSGYRBnbqu:0uJP4vDiqWhq6iES/pz
+Tests/SSDeepTests/TestData/generated/boundary-2pow10.bin|12:vLDPeR4iqi5xRe6KCBcWkzyYWme5KioGFqTmB4/DuCu99l2GF87TPnicbrehIeUn:n
+Tests/SSDeepTests/TestData/generated/boundary-2pow12.bin|12:vLDPeR4iqi5xRe6KCBcWkzyYWme5KioGFqTmB4/DuCu99l2GF87TPnicbrehIeUn:n
+Tests/SSDeepTests/TestData/generated/boundary-2pow16.bin|12:vLDPeR4iqi5xRe6KCBcWkzyYWme5KioGFqTmB4/DuCu99l2GF87TPnicbrehIeUn:n
+Tests/SSDeepTests/TestData/generated/boundary-2pow20.bin|12:vLDPeR4iqi5xRe6KCBcWkzyYWme5KioGFqTmB4/DuCu99l2GF87TPnicbrehIeUn:n
+Tests/SSDeepTests/TestData/generated/boundary-all-ones.bin|3:RRD:LD
+Tests/SSDeepTests/TestData/generated/boundary-all-zeros.bin|3::
+Tests/SSDeepTests/TestData/generated/pattern-alternating.bin|3:yM:yM
+Tests/SSDeepTests/TestData/generated/pattern-gradual.bin|192:znnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnb:n
+Tests/SSDeepTests/TestData/generated/pattern-high-entropy.bin|12:rUyqLDPeR4iqi5xRe6KCBcWkzyYWme5KioGFqTmB4/DuCu99l2GF87TPnicbrehB:n
+Tests/SSDeepTests/TestData/generated/pattern-low-entropy.bin|3:0DlgplXlXmltTlL/nllal5ltal+l5lN/Fyltnl5lVlWblEKlcltDlkEl3kVewltW:05lWUaSCORLkMpQ
+Tests/SSDeepTests/TestData/generated/pattern-repeated-blocks.bin|24:KnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnG:n
+Tests/SSDeepTests/TestData/generated/random-100kb.bin|12:/ehIeUS87DDSe2lPYveUyqLDPeR4iqi5xRe6KCBcWkzyYWme5KioGFqTmB4/DuCf:n
+Tests/SSDeepTests/TestData/generated/random-10kb.bin|12:/ehIeUS87DDSe2lPYveUyqLDPeR4iqi5xRe6KCBcWkzyYWme5KioGFqTmB4/DuCf:n
+Tests/SSDeepTests/TestData/generated/random-1kb.bin|12:/ehIeUS87DDSe2lPYveUyqLDPeR4iqi5xRe6KCBcWkzyYWme5KioGFqTmB4/DuCf:n
+Tests/SSDeepTests/TestData/generated/random-1mb.bin|12:/ehIeUS87DDSe2lPYveUyqLDPeR4iqi5xRe6KCBcWkzyYWme5KioGFqTmB4/DuCf:n

@@ -64,14 +64,16 @@ public final class SSDeepGenerator {
 
     /// Set the total input length
     ///
-    /// Setting the total length allows the generator to calculate an optimal
-    /// starting block size, which can improve performance for large inputs.
+    /// Setting the total length allows tracking of the total processed bytes.
+    /// Note: Unlike the original optimization, we always process all block sizes
+    /// from the minimum to match ssdeep 2.14.1 behavior.
     ///
     /// - Parameter length: The total number of bytes that will be processed
     public func setTotalLength(_ length: UInt64) {
         self.totalLength = length
         self.hasSetTotalLength = true
-        self.startBlockSize = calculateInitialBlockSize(inputLength: length)
+        // Note: Removed block size pre-calculation to match ssdeep 2.14.1
+        // Always process all block sizes starting from minimum (3)
     }
 
     /// Feed data to the generator
@@ -160,10 +162,9 @@ public final class SSDeepGenerator {
         // Update rolling hash
         let h = rollingHash.update(byte)
 
-        // Process each block hash level
-        let startIndex = blockSizeIndexFor(startBlockSize)
-
-        for i in startIndex..<SSDeepConstants.numBlockHashes {
+        // Process each block hash level starting from minimum (index 0)
+        // This ensures we track all possible block sizes as ssdeep 2.14.1 does
+        for i in 0..<SSDeepConstants.numBlockHashes {
             let blockSize = blockSizeAt(index: i)
 
             // Update FNV hash for this level
@@ -192,21 +193,6 @@ public final class SSDeepGenerator {
         }
     }
 
-    private func calculateInitialBlockSize(inputLength: UInt64) -> UInt32 {
-        var blockSize = SSDeepConstants.minBlockSize
-
-        // We want a block size that produces a hash of reasonable length
-        // Aim for at least SPAMSUM_LENGTH/2 blocks
-        while UInt64(blockSize) * UInt64(SSDeepConstants.spamsumLength) < inputLength {
-            blockSize *= 2
-            if blockSize > UInt32.max / 2 {
-                break
-            }
-        }
-
-        return blockSize
-    }
-
     private func blockSizeAt(index: Int) -> UInt32 {
         return SSDeepConstants.minBlockSize << UInt32(index)
     }
@@ -222,26 +208,32 @@ public final class SSDeepGenerator {
     }
 
     private func findBestBlockSize() -> (index: Int, blockSize: UInt32) {
-        let startIndex = blockSizeIndexFor(startBlockSize)
-
-        // Find the first block size that produces a non-empty hash2
-        // but also has a reasonable hash1
-        for i in startIndex..<(SSDeepConstants.numBlockHashes - 1) {
+        // Find the best block size matching ssdeep 2.14.1 behavior
+        // We want the smallest block size where:
+        // 1. hash1 has reasonable length (>= 32 chars)
+        // 2. hash1 is NOT completely filled (< 64 chars)
+        // This ensures we don't select a block size that's too small
+        for i in 0..<(SSDeepConstants.numBlockHashes - 1) {
             let hash1Length = blockHashes[i].digest.count
-            let hash2Length = blockHashes[i + 1].digest.count
 
-            // We want hash1 to have content, and ideally hash2 too
-            // The original ssdeep prefers the smallest block size that
-            // produces a non-trivial hash
-            if hash1Length >= SSDeepConstants.spamsumLength / 2 || hash2Length > 0 {
-                // Check if we should include the final partial block
+            // Select block size with good hash1 length that's not maxed out
+            if hash1Length >= SSDeepConstants.spamsumLength / 2 &&
+               hash1Length < SSDeepConstants.spamsumLength {
                 let bs = blockSizeAt(index: i)
                 return (i, bs)
             }
         }
 
-        // Fall back to the start block size
-        return (startIndex, startBlockSize)
+        // If we didn't find a perfect match, use last non-empty hash
+        for i in (0..<SSDeepConstants.numBlockHashes - 1).reversed() {
+            if blockHashes[i].digest.count > 0 {
+                let bs = blockSizeAt(index: i)
+                return (i, bs)
+            }
+        }
+
+        // Fallback to minimum block size
+        return (0, SSDeepConstants.minBlockSize)
     }
 
     private func buildHashString(at index: Int) -> String {

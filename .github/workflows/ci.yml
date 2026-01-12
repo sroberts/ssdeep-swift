@@ -8,7 +8,7 @@ on:
 
 jobs:
   test-macos:
-    name: Test on macOS
+    name: Test on macOS with Reference Validation
     runs-on: macos-latest
     strategy:
       matrix:
@@ -22,6 +22,14 @@ jobs:
         with:
           swift-version: ${{ matrix.swift-version }}
 
+      - name: Install ssdeep 2.14.1
+        run: |
+          brew install ssdeep
+          ssdeep -V
+
+      - name: Generate test data
+        run: swift Scripts/generate-test-data.swift
+
       - name: Build
         run: swift build -v
 
@@ -29,7 +37,7 @@ jobs:
         run: swift test -v
 
   test-linux:
-    name: Test on Linux
+    name: Test on Linux with Reference Validation
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -39,6 +47,15 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Install ssdeep
+        run: |
+          apt-get update
+          apt-get install -y ssdeep
+          ssdeep -V
+
+      - name: Generate test data
+        run: swift Scripts/generate-test-data.swift
 
       - name: Build
         run: swift build -v
